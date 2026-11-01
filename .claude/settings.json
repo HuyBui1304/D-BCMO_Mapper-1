@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:people.csail.mit.edu)",
+      "WebFetch(domain:ngdc.cncb.ac.cn)",
+      "WebFetch(domain:doi.org)",
+      "WebFetch(domain:github.com)",
+      "Bash(python3 -)",
+      "WebFetch(domain:bmcbioinformatics.biomedcentral.com)",
+      "WebFetch(domain:arxiv.org)",
+      "Bash(gh api *)",
+      "WebFetch(domain:link.springer.com)"
+    ]
+  }
+}

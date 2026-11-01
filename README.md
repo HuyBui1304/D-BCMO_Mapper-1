@@ -114,16 +114,22 @@ km.run_bcmo(
 
 The `implement/` folder contains one Jupyter notebook per dataset reproducing Tables 2–3 and Figures 7–8 of the paper:
 
-| Dataset | Folder | BCMO bounds `(N, α)` |
-|---|---|---|
-| Disjoint circles | `two_cir/` | (10, 12), (0.01, 0.20) |
-| Intersecting circles | `two_i_cir/` | (6, 8), (0.01, 0.10) |
-| Trefoil knot | `trefoil/` | (7, 9), (0.01, 0.10) |
-| Cat | `cat/` | (7, 15), (0.01, 0.10) |
-| Lion | `lion/` | (8, 10), (0.01, 0.10) |
-| Horse | `horse/` | (5, 12), (0.01, 0.10) |
-| Human | `human/` | (5, 12), (0.01, 0.10) |
-| SARS-CoV-2 | `covid-19/` | (10, 20), (0.001, 0.007) |
+| Dataset | Folder | Data | BCMO bounds `(N, α)` |
+|---|---|---|---|
+| Disjoint circles | `two_cir/` | Simulated: [D-Mapper repository](https://github.com/ShufeiGe/D-Mapper/tree/main/dmapper_examples/two_cir) | (10, 12), (0.01, 0.20) |
+| Intersecting circles | `two_i_cir/` | Simulated: [D-Mapper repository](https://github.com/ShufeiGe/D-Mapper/tree/main/dmapper_examples/two_i_cir) | (6, 8), (0.01, 0.10) |
+| Trefoil knot | `trefoil/` | Simulated: [`make_trefoil`](https://github.com/braindynamicslab/dyneusr/blob/master/dyneusr/datasets/trefoil.py) from DyNeuSR | (7, 9), (0.01, 0.10) |
+| Cat | `cat/` | [Cat poses](https://people.csail.mit.edu/sumner/research/deftransfer/data.html) (Sumner & Popović, 2004) | (7, 15), (0.01, 0.10) |
+| Lion | `lion/` | [Lion poses](https://people.csail.mit.edu/sumner/research/deftransfer/data.html) (Sumner & Popović, 2004) | (8, 10), (0.01, 0.10) |
+| Horse | `horse/` | [Horse poses](https://people.csail.mit.edu/sumner/research/deftransfer/data.html) (Sumner & Popović, 2004) | (5, 12), (0.01, 0.10) |
+| Human | `human/` | [Mesh Segmentation Benchmark](https://segeval.cs.princeton.edu/), model `1.off` (Chen et al., 2009) | (5, 12), (0.01, 0.10) |
+| SARS-CoV-2 | `covid-19/` | Sequences: [GenBase](https://ngdc.cncb.ac.cn/genbase/); distance matrix: [D-Mapper repository](https://github.com/ShufeiGe/D-Mapper/tree/main/dmapper_examples/covid-19) | (10, 20), (0.001, 0.007) |
+
+The input files are already included in each folder, so these links are only needed to trace or re-download the original data:
+
+- **Trefoil knot** has no data file: it is generated inside the notebook and requires `pip install dyneusr`.
+- **Cat, Lion, Horse** use only the reference mesh of each pose set (`cat-reference.obj`, `lion-reference.obj`, `horse-reference.pose`).
+- **SARS-CoV-2** reads the precomputed distance matrix `dis_matrix.csv` (357 sequences), not the raw sequences.
 
 Each notebook's first cell sets up the path. After completing the installation steps above, run the notebooks from within their respective folders.
 
@@ -201,6 +207,12 @@ POSSIBILITY OF SUCH DAMAGE.
 
 These modules are designed as extensions to [KeplerMapper](https://kepler-mapper.scikit-tda.org/) (BSD 3-Clause License).
 
+### Example datasets
+
+- **Cat, Lion, Horse:** the mesh data used in this project was made available by Robert Sumner and Jovan Popovic from the Computer Graphics Group at MIT.
+- **Human:** model from the [Mesh Segmentation Benchmark](https://segeval.cs.princeton.edu/), distributed under the [AIM@SHAPE General License](https://segeval.cs.princeton.edu/public/AIM.txt), which allows research and non-commercial use only.
+- **SARS-CoV-2:** sequences from [GenBase](https://ngdc.cncb.ac.cn/genbase/), National Genomics Data Center, China.
+
 ---
 
 ## Citation
@@ -239,6 +251,49 @@ And the underlying methods:
   pages={250--270},
   year={2020},
   publisher={Elsevier}
+}
+```
+
+And the example datasets:
+
+```bibtex
+@article{sumner2004deformation,
+  title={Deformation transfer for triangle meshes},
+  author={Sumner, Robert W. and Popovi{\'c}, Jovan},
+  journal={ACM Transactions on Graphics},
+  volume={23},
+  number={3},
+  pages={399--405},
+  year={2004},
+  publisher={ACM}
+}
+
+@article{Chen2009,
+author = {Chen, Xiaobai and Golovinskiy, Aleksey and Funkhouser, Thomas},
+title = {A benchmark for 3D mesh segmentation},
+year = {2009},
+issue_date = {August 2009},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {28},
+number = {3},
+issn = {0730-0301},
+doi = {10.1145/1531326.1531379},
+journal = {ACM Transactions on Graphics},
+articleno = {73},
+numpages = {12},
+keywords = {3D mesh analysis, 3D mesh segmentation}
+}
+
+@article{cncb2023database,
+  title={Database Resources of the National Genomics Data Center, China National Center for Bioinformation in 2023},
+  author={{CNCB-NGDC Members and Partners}},
+  journal={Nucleic Acids Research},
+  volume={51},
+  number={D1},
+  pages={D18--D28},
+  year={2023},
+  publisher={Oxford University Press}
 }
 ```
 
