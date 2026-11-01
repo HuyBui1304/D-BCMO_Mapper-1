@@ -10,8 +10,8 @@
 
 The standard [Mapper algorithm](https://kepler-mapper.scikit-tda.org/) requires manual selection of cover parameters. D_BCMO-Mapper automates this via:
 
-1. **D-Mapper** (Tao & Ge 2024) — replaces the uniform cover with a GMM-based distribution-guided cover (`D_Cover`), giving more adaptive interval construction.
-2. **BCMO** (Le-Duc et al. 2020) — metaheuristic optimizer that searches for the `(n_cubes, alpha)` pair maximizing the adjusted silhouette coefficient `SC_adj`.
+1. **D-Mapper** ([Tao & Ge, 2025](https://doi.org/10.1186/s12859-025-06085-5) · [GitHub](https://github.com/ShufeiGe/D-Mapper)) — replaces the uniform cover with a GMM-based distribution-guided cover (`D_Cover`), giving more adaptive interval construction.
+2. **BCMO** ([Le-Duc et al., 2020](https://doi.org/10.1016/j.ins.2020.02.013) · [GitHub](https://github.com/ThangLe-duc/BCMO_Package)) — metaheuristic optimizer that searches for the `(n_cubes, alpha)` pair maximizing the adjusted silhouette coefficient `SC_adj`.
 
 The objective `SC_adj = w1 * SC_norm + w2 * TSR` balances cluster quality (normalized silhouette) and topological robustness (Topological Signal Rate).
 
