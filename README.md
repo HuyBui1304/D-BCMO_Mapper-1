@@ -127,8 +127,8 @@ The `implement/` folder contains one Jupyter notebook per dataset reproducing Ta
 
 The input files are already included in each folder, so these links are only needed to trace or re-download the original data:
 
-- **Trefoil knot** has no data file: it is generated inside the notebook and requires `pip install dyneusr`.
-- **Cat, Lion, Horse** use only the reference mesh of each pose set (`cat-reference.obj`, `lion-reference.obj`, `horse-reference.pose`).
+- **Trefoil knot** has no data file: it is generated inside the notebook with DyNeuSR. Install it with `pip install seaborn "nilearn<0.13" "ipython<9"` followed by `pip install --no-deps dyneusr`, because a plain `pip install dyneusr` downgrades kmapper to 1.2.0 and `D_Mapper` can no longer be imported.
+- **Cat, Lion, Horse** use only the reference mesh of each pose set: `cat-reference.obj`, `lion-reference.obj` and `horse-reference.pose` in the original archives. The `lion/` and `horse/` folders store the vertices as `.csv`.
 - **SARS-CoV-2** reads the precomputed distance matrix `dis_matrix.csv` (357 sequences), not the raw sequences.
 
 Each notebook's first cell sets up the path. After completing the installation steps above, run the notebooks from within their respective folders.
