@@ -2,7 +2,7 @@
 
 **D_BCMO-Mapper** is a metaheuristic framework for automatic hyperparameter optimization in Topological Data Analysis (TDA). It combines the **D-Mapper** algorithm (distribution-guided Mapper) with **BCMO** (Balancing Composite Motion Optimization) to automatically tune the `(n_cubes, alpha)` parameters of the Mapper pipeline.
 
-> Bui et al., "D_BCMO-Mapper: A Metaheuristic Framework for Distribution-Guided Parameter Optimization in Topological Data Analysis," *Vietnam Journal of Computer Science* (2025).
+> Bui et al., "D_BCMO-Mapper: A Metaheuristic Framework for Distribution-Guided Parameter Optimization in Topological Data Analysis," under review at *Vietnam Journal of Computer Science* (2026).
 
 ---
 
