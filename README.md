@@ -208,12 +208,12 @@ These modules are designed as extensions to [KeplerMapper](https://kepler-mapper
 If you use D_BCMO-Mapper in your research, please cite:
 
 ```bibtex
-@misc{bui2025dbcmomapper,
+@misc{bui2026dbcmomapper,
   title  = {D\_BCMO-Mapper: A Metaheuristic Framework for Distribution-Guided
             Parameter Optimization in Topological Data Analysis},
   author = {Bui, Minh Huy and others},
   note   = {Under review at Vietnam Journal of Computer Science},
-  year   = {2025}
+  year   = {2026}
 }
 ```
 
