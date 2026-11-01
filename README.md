@@ -21,10 +21,10 @@ The objective `SC_adj = w1 * SC_norm + w2 * TSR` balances cluster quality (norma
 
 | File | Description | Origin |
 |---|---|---|
-| `dcover.py` | `D_Cover` — GMM-based distribution-guided cover (Eqs. 1–2 in paper) | D-Mapper (Tao & Ge 2024) |
+| `dcover.py` | `D_Cover` — GMM-based distribution-guided cover | D-Mapper (Tao & Ge 2024) |
 | `dmapper.py` | `D_Mapper` — Mapper pipeline using `D_Cover` | D-Mapper (Tao & Ge 2024) |
-| `evaluate.py` | `compute_SC_adj` — adjusted silhouette metric (Eqs. 3–6 in paper) | D-Mapper (Tao & Ge 2024) |
-| `bcmo.py` | `BCMO` — Balancing Composite Motion Optimization (Algorithm 3.1) | This work |
+| `evaluate.py` | `compute_SC_adj` — adjusted silhouette metric | D-Mapper (Tao & Ge 2024) |
+| `bcmo.py` | `BCMO` — Balancing Composite Motion Optimization | This work |
 | `experiment.py` | `auto_seed`, `dmapper_objective`, `run_bcmo` — notebook helpers | This work |
 
 ---
@@ -112,7 +112,7 @@ km.run_bcmo(
 
 ## Example Notebooks
 
-The `implement/` folder contains one Jupyter notebook per dataset reproducing Tables 2–3 and Figures 7–8 of the paper:
+The `implement/` folder contains one Jupyter notebook per dataset. Each notebook runs the BCMO search and builds the graph at the best-found parameters:
 
 | Dataset | Folder | Data | BCMO bounds `(N, α)` |
 |---|---|---|---|
@@ -223,7 +223,7 @@ If you use D_BCMO-Mapper in your research, please cite:
 @misc{bui2026dbcmomapper,
   title  = {D\_BCMO-Mapper: A Metaheuristic Framework for Distribution-Guided
             Parameter Optimization in Topological Data Analysis},
-  author = {Bui, Minh Huy and others},
+  author = {Bui, Quang-Thinh and Ha, Loi and Bui, Minh-Huy and Nguyen, Hung},
   note   = {Under review at Vietnam Journal of Computer Science},
   year   = {2026}
 }
